@@ -1,5 +1,8 @@
 {
   "phases": {
+    "setup": {
+      "cmds": ["python3", "gcc"]
+    },
     "install": {
       "cmd": "pip install -r requirements.txt"
     },
