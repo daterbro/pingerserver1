@@ -1,10 +1,14 @@
 {
   "phases": {
     "setup": {
-      "cmds": ["python3", "gcc"]
+      "pkgs": ["python3", "gcc"]
     },
     "install": {
-      "cmd": "pip install -r requirements.txt"
+      "cmds": [
+        "python -m venv /opt/venv",
+        ". /opt/venv/bin/activate",
+        "pip install -r requirements.txt"
+      ]
     },
     "start": {
       "cmd": "uvicorn app:app --host 0.0.0.0 --port 8080"
